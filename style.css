@@ -69,13 +69,15 @@ body {
     font-weight: 550;
 }
 .logo span {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 25px;
     color: #000000;
-    text-decoration: none;
-    font-weight: 550;
 }
-
+/* Responsif: Saat layar kecil (max 768px), logo tetap di tengah */
+@media screen and (max-width: 768px) {
+    .logo {
+        
+        text-align: center;
+    }
+}
 .navbar a {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
@@ -161,19 +163,6 @@ body {
    
 }
 
-.about-konten {
-    max-width: 2000px; 
-    text-align: center;
-}
-.about-konten h1 {
-    font-size: 56px;
-    font-weight: 700; 
-    line-height: 1.2;
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.about-konten span {
-    color: rgb(0, 0, 0); 
-}
 
 
 .btn-box a {
@@ -276,6 +265,81 @@ body {
     margin-top: 45px;
 }
 
+@media screen and (max-width: 768px) {
+    .halaman {
+        flex-direction: column; /* Elemen ditumpuk secara vertikal */
+        align-items: center; /* Pusatkan konten */
+        text-align: center;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .img-box {
+        margin-top: 130px;
+        order: -1; /* Memindahkan gambar ke atas */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .img-box img {
+        width: 250px; /* Perkecil ukuran gambar */
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .halaman-konten {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .halaman-konten h1 {
+        font-size: 36px; /* Sesuaikan ukuran agar pas */
+    }
+
+    .halaman-konten h3 {
+        font-size: 24px;
+    }
+
+    .halaman-konten p {
+        font-size: 16px;
+    }
+
+    .btn-box {
+        justify-content: center; /* Tombol tetap di tengah */
+        margin-left: 0;
+    }
+
+    .logo1 {
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+        margin-right: 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo1 a {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
 
 
-
+/* Tampilan About*/
+.about-konten {
+    max-width: 2000px; 
+    text-align: center;
+    height: 300px;
+}
+.about-konten h1 {
+    font-size: 56px;
+    font-weight: 700; 
+    line-height: 1.2;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.about-konten span {
+    color: rgb(0, 0, 0); 
+}
