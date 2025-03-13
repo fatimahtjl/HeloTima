@@ -73,12 +73,12 @@ body {
     transform: scaleX(1);
 }
 
-
 .halaman {
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 10%;
+   margin-left: 100px;
+   margin-top: 40px;
 }
 
 .halaman-konten {
@@ -89,7 +89,7 @@ body {
     font-size: 56px;
     font-weight: 700; 
     line-height: 1.2;
-   
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .halaman-konten h3 {
@@ -101,11 +101,12 @@ body {
 .halaman-konten p {
     font-size: 18px;
     color: black;
-    margin-top: 20px;
+    margin-top: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .halaman-konten span {
-    color: rgb(255, 147, 165);
+    color: rgb(0, 0, 0);
 }
 
 .halaman-konten span h3 {
@@ -114,7 +115,8 @@ body {
 
 .halaman-konten .btn-box {
     display: flex ;
-    margin-left: 140px;
+    margin-top: 20px;
+    margin-left: 190px;
     justify-content: space-between;
     width: 150px;
     height: 50px;
@@ -129,7 +131,7 @@ body {
     background: white;
     border: 3px solid rgb(0, 0, 0);
     border-radius: 15px;
-    font-size: 20px;
+    font-size: 25px;
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 600;
@@ -148,12 +150,13 @@ body {
     left: 50%;
     width: 300%;
     height: 300%;
-    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    background: linear-gradient(45deg, #000000, #ff7eb3);
     transition: 0.5s ease-in-out;
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0);
     z-index: -1;
 }
+
 
 /* Efek saat hover */
 .btn-box a:hover {
