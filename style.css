@@ -160,8 +160,8 @@ body {
 
 /* Efek saat hover */
 .btn-box a:hover {
-    color: rgb(0, 0, 0);
-    border-color: red;
+    color: #a999cc;
+    border-color: #a999cc;
 }
 
 .btn-box a:hover::before {
@@ -171,11 +171,12 @@ body {
 
 .logo1 {
     position: absolute;
-    bottom: 40px;
+    bottom: 10px;
     width: 170px;
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-left: 180px;
 }
 
 .logo1 a {
@@ -186,17 +187,17 @@ body {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid rgb(255, 147, 165);
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 50%;
     font-size: 20px;
-    color: rgb(255, 147, 165);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     z-index: 1;
     overflow: hidden;
     transition: .5s;
 }
 .logo1 a :hover {
-    color: rgb(255, 147, 165);
+    color: rgb(255, 255, 255);
 }
 
 .logo1 a::before {
@@ -215,10 +216,11 @@ body {
 }
 .img-box img {
     border-radius: 100%;
-    width: 350px;
+    width: 340px;
     height: 480px;
     margin-left: 200px;
-    margin-top: 130px;
+    margin-right: 30px;
+    margin-top: 45px;
 }
 
 
