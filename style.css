@@ -144,7 +144,7 @@ body {
 }
 
 .halaman-konten span {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);    
 }
 
 .halaman-konten span h3 {
@@ -160,9 +160,21 @@ body {
     height: 50px;
    
 }
-.cv {
 
+.about-konten {
+    max-width: 2000px; 
+    text-align: center;
 }
+.about-konten h1 {
+    font-size: 56px;
+    font-weight: 700; 
+    line-height: 1.2;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.about-konten span {
+    color: rgb(0, 0, 0); 
+}
+
 
 .btn-box a {
     display: inline-block;
