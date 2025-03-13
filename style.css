@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman' ;
+}
+body {
+    background: rgb(118, 200, 233);
+    color: white;
+}
+
+.header {
+    position: fixed; /* posisi tetap berada di tempat*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 10%;
+    background: rgb(255, 147, 165);
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 550;
+}
+
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color:  rgb(100, 205, 247);
+}
+
+.halaman {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.halaman-konten {
+    max-width: 2000px; 
+}
+
+.halaman-konten h1 {
+    font-size: 56px;
+    font-weight: 700; 
+    line-height: 1.2;
+   
+}
+
+.halaman-konten h3 {
+    font-size: 32px;
+    font-weight: 700;
+    
+}
+
+.halaman-konten p {
+    font-size: 18px;
+    color: black;
+    margin-top: 20px;
+}
+
+.halaman-konten span {
+    color: rgb(255, 147, 165);
+}
+
+.halaman-konten span h3 {
+    color: rgb(255, 147, 165); 
+}
+
+.halaman-konten .btn-box {
+    display: flex ;
+    margin-left: 140px;
+    justify-content: space-between;
+    width: 150px;
+    height: 50px;
+   
+}
+
+.btn-box a {
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    height: 60px;
+    background: white;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 60px;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out, border-color 0.4s;
+}
+
+/* Efek latar belakang hover */
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    transition: 0.5s ease-in-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: -1;
+}
+
+/* Efek saat hover */
+.btn-box a:hover {
+    color: rgb(0, 0, 0);
+    border-color: red;
+}
+
+.btn-box a:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.logo1 {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.logo1 a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(255, 147, 165);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(255, 147, 165);
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.logo1 a :hover {
+    color: rgb(255, 147, 165);
+}
+
+.logo1 a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: .5s;
+}
+
+.logo1 a:hover::before {
+    width: 100%;
+}
+.img-box img {
+    border-radius: 100%;
+    width: 350px;
+    height: 480px;
+    margin-left: 200px;
+    margin-top: 130px;
+}
+
+
+
+
