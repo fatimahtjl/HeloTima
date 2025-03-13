@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTOFOLIO</title>
-   <link rel="stylesheet" href="style.css">
-   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
+
     <header class="header">
-        <a class="logo">Hello, <span> Tima!</a></span>
-        <nav class="navbar">
-            <a href="#halaman" >Home</a>
-            <a href="#">About</a>
+        <a class="logo">Hello, <span> Tima!</span></a>
+
+        <!-- Tombol hamburger -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <nav class="navbar" id="navbar">
+            <a href="#halaman">Home</a>
+            <a href="#cv">About</a>
             <a href="#">Project</a>
             <a href="#">Contact</a>
-        
         </nav>
     </header>
-    <section class="halaman">
+
+    <section class="halaman" id="halaman">
         <div class="halaman-konten">
             <h1>Hai, Saya<br><span>Fatimah</span> Fitri <br> Hutajulu</h1>
             <h3>Mahasiswi <span>Teknik Informatika</span></h3>
-            <p>
-                Selamat datang di ruang kecil saya! Nggak banyak di sini, <br>tapi semoga tetap seru buat dikunjungi. Enjoy!
-            </p>
+            <p>Selamat datang di ruang kecil saya! Nggak banyak di sini, <br> tapi semoga tetap seru buat dikunjungi. Enjoy!</p>
             <div class="btn-box">
                 <a href="https://t.me/timafitriii">Let's Talk</a>
             </div>
         </div>
-
         <div class="logo1">
             <a href="https://www.instagram.com/fatimahtjl"><i class='bx bxl-instagram'></i></a>
             <a href="https://wa.me/6281992269526"><i class='bx bxl-whatsapp'></i></a>
@@ -38,8 +42,47 @@
         <div class="img-box">
             <img src="fototima.jpeg" alt="ini tima">
         </div>
-
     </section>
 
+    <section id="cv">
+        <div>
+            <img src="cv.jpg" alt="">
+        </div>
+    </section>
+
+    <!-- Tambahkan JavaScript -->
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+
+    // Fungsi untuk menampilkan atau menyembunyikan navbar
+    menuToggle.addEventListener("click", function (event) {
+        navbar.classList.toggle("active");
+        event.stopPropagation(); // Mencegah event klik dari menyebar ke document
+    });
+
+    // Fungsi untuk menyembunyikan navbar saat klik di luar area menu
+    document.addEventListener("click", function (event) {
+        if (!navbar.contains(event.target) && !menuToggle.contains(event.target)) {
+            navbar.classList.remove("active");
+        }
+    });
+});
+
+document.querySelectorAll('.navbar a').forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault(); // Mencegah reload halaman
+
+            const targetId = this.getAttribute('href'); // Ambil href misalnya #about
+            const targetSection = document.querySelector(targetId); // Temukan section yang sesuai
+
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+</script>
 </body>
 </html>
