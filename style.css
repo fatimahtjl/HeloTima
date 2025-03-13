@@ -307,17 +307,18 @@ body {
     }
 
     .btn-box {
-        justify-content: center; /* Tombol tetap di tengah */
-        margin-left: 0;
+        width: fit-content; /* Supaya menyesuaikan dengan tombol */
+        display: flex;
+        justify-content: center; /* Pastikan tombol ada di tengah */
+        margin: 20px auto !important;
     }
 
     .logo1 {
         position: relative;
-        width: 100%;
-        margin-top: 20px;
-        margin-right: 50px;
+        width: fit-content; /* Menyesuaikan dengan isi (ikon) */
+        margin: 20px auto 0 auto; /* Bisa kamu ubah sendiri */
         display: flex;
-        justify-content: center;
+        gap: 10px; /* Jarak antar ikon, bisa disesuaikan */
     }
 
     .logo1 a {
@@ -332,7 +333,7 @@ body {
 .about-konten {
     max-width: 2000px; 
     text-align: center;
-    height: 300px;
+    height:300px;
 }
 .about-konten h1 {
     font-size: 56px;
