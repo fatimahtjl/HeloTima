@@ -18,9 +18,47 @@ body {
     padding: 40px 10%;
     background: linear-gradient(to right, #beb2da, #f8f3ff);
     display: flex; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 1000;
+}
+
+
+/* Tombol hamburger */
+.menu-toggle {
+    display: none; /* Sembunyikan default */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Navbar biasa (desktop) */
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+/* Responsif: Navbar berubah jadi hamburger menu */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Muncul di HP */
+    }
+
+    .navbar {
+        display: none; /* Sembunyikan menu */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: #e6d6f2;
+        width: 200px;
+        padding: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar.active {
+        display: flex; /* Muncul saat tombol ditekan */
+    }
 }
 
 .logo {
@@ -116,11 +154,14 @@ body {
 .halaman-konten .btn-box {
     display: flex ;
     margin-top: 20px;
-    margin-left: 190px;
+    margin-left: 100px;
     justify-content: space-between;
     width: 150px;
     height: 50px;
    
+}
+.cv {
+
 }
 
 .btn-box a {
@@ -171,12 +212,12 @@ body {
 
 .logo1 {
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     width: 170px;
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-    margin-left: 180px;
+    margin-left: 90px;
 }
 
 .logo1 a {
