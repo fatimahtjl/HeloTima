@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="gWj8kCb6VhODEZpmzG1cQDKswjl491fm_miYN738Qew" />
+    <script type="module" src="https://cdn.jsdelivr.net/gh/domyid/tracker@latest/index.js"></script>
     <title>PORTOFOLIO</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
@@ -45,26 +48,27 @@
     </section>
 
     <section class="about" id="about">
-       <div class="about-konten">
+       <div class="about-title">
             <h1>About <span>Me!</span> </h1>
+       <div class="about-konten"></div>
+        <div class="img-box h1">
+            <img src="fototima.jpeg" alt="ini tima">
         </div>
-        <div class="about-konten k1">
+        <div class="about-konten p">
             <p>
-                 Saya adalah mahasiswi Teknik Informatika angkatan 2024 di Universitas Logistik dan
-                 Bisnis Internasional. Saat ini, saya sedang menjalani perjalanan seru di dunia teknologi. 
-                 Dari memahami logika pemrograman sampai menjelajahi algoritma, setiap baris kode yang 
-                 saya pelajari adalah langkah kecil menuju masa depan di industri teknologi. Ini bukan 
-                 sekadar belajar, tapi sebuah petualangan untuk menciptakan sesuatu yang bermakna.
+                 Saya adalah mahasiswi Teknik Informatika angkatan 2024 di <br>Universitas Logistik dan
+                 Bisnis Internasional. Saat ini, saya sedang <br> menjalani perjalanan seru di dunia teknologi. 
+                 Dari memahami <br>logika pemrograman sampai menjelajahi algoritma, setiap baris <br>kode yang 
+                 saya pelajari adalah langkah kecil menuju masa depan <br> di industri teknologi. Ini bukan 
+                 sekadar belajar, tapi sebuah petualangan <br>untuk menciptakan sesuatu yang bermakna.
             </p>
         </div>
-
+        </div>
+    </div>
     </section>
-
-    
-
-    <!-- Tambahkan JavaScript -->
 <script>
-   document.addEventListener("DOMContentLoaded", function () {
+    
+document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
     const navbar = document.getElementById("navbar");
 
@@ -94,7 +98,22 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
             }
         });
     });
+    document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        const offset = 100; // Sesuaikan dengan tinggi navbar
 
+        window.scrollTo({
+            top: targetElement.offsetTop - offset,
+            behavior: 'smooth'
+        });
+    });
+});
 </script>
+    
+
+   
 </body>
 </html>
