@@ -335,12 +335,22 @@ body {
     text-align: center;
     height:300px;
 }
-.about-konten h1 {
-    font-size: 56px;
-    font-weight: 700; 
-    line-height: 1.2;
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
+
 .about-konten span {
     color: rgb(0, 0, 0); 
+}
+.about-title {
+    max-width: 2000px; 
+    text-align: center;
+    height:300px;
+}
+.about-title h1 {
+    font-size: 56px;
+    font-weight: 700; 
+    line-height: 2.0;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.about-title span {
+    color: rgb(0, 0, 0);  
 }
