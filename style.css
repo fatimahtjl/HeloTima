@@ -79,18 +79,16 @@ body {
     }
 }
 .navbar a {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
     font-size: 18px;
-  
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 800;
     margin-left: 40px;
-    position: relative;
     transition: color 0.3s ease-in-out;
 }
 
-/* Efek garis bawah saat hover */
+/* Garis bawah default (tidak terlihat) */
 .navbar a::after {
     content: "";
     position: absolute;
@@ -109,10 +107,11 @@ body {
     color: rgb(255, 255, 255);
 }
 
+/* Efek garis putih saat aktif atau di-hover */
+.navbar a.active::after,
 .navbar a:hover::after {
     transform: scaleX(1);
 }
-
 .halaman {
     height: 100vh;
     display: flex;
@@ -353,4 +352,56 @@ body {
 
 .about-title span {
     color: rgb(0, 0, 0);  
+}
+
+
+
+.about-container {
+    display: flex;
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    justify-content: center; /* Menengahkan elemen */
+    gap: 100px; /* Jarak antara foto dan teks */
+    padding: 0 10%;
+    margin-top: -180px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-img {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.about-img img {
+    width: 300px; /* Atur ukuran gambar */
+    border-radius: 1000px; /* Membuat sudut gambar lebih lembut */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+   
+}
+
+.about-content {
+    margin-top: -50px;
+    color: black;
+    max-width: 490px;
+    font-size: 18px;
+    line-height: 1.5; 
+    text-align: justify;
+    text-align-last: justify; /* Baris terakhir tetap rata kiri */
+    transform: translateX(100px);
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    
+}
+.about-content h1{
+    font-size: 45px;
+    margin-left: 120px;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #ffffff    ;
+
+}
+.show {
+    opacity: 1;
+    transform: translateX(0);
 }
