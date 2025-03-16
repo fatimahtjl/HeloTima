@@ -84,6 +84,7 @@ body {
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-left: 40px;
     transition: color 0.3s ease-in-out;
 }
@@ -401,7 +402,140 @@ body {
   color: #ffffff    ;
 
 }
+.about-content p {
+    width: 100%; /* Agar teks menyesuaikan lebar parent */
+    max-width: 490px; /* Batas maksimal agar tetap enak dibaca */
+    text-align: justify; /* Rata kanan-kiri */
+    word-wrap: break-word; /* Mencegah teks keluar dari batas */
+}
 .show {
     opacity: 1;
     transform: translateX(0);
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Susun elemen secara vertikal */
+        gap: 20px; /* Kurangi jarak */
+        text-align: center; /* Pusatkan teks */
+        margin-top: 0;
+        padding: 0 5%;
+    }
+
+    .about-img {
+        transform: translateX(-80px);
+        opacity: 1;
+       
+    }
+
+    .about-content {
+        margin-top: 30px;
+        transform: translateX(80px);
+        opacity: 1;
+        max-width: 90%;
+        text-align: center;
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .about-content h1 {
+        margin-left: 0;
+    }
+    .about-content {
+        max-width: 90%; /* Biarkan teks mengikuti lebar layar dengan margin kecil */
+        text-align: justify; /* Pastikan tetap rata kanan-kiri */
+        padding: 0 10px; /* Tambahkan padding biar nggak terlalu nempel ke sisi layar */
+    }
+    .show {
+        opacity: 1;
+        transform: translateX(0); /* Kembali ke posisi normal */
+    }
+}
+
+.skills {
+    margin-top: 10px;
+    text-align: center;
+    padding: 40px 10%;
+    
+}
+
+.skills-title h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.skills-title span {
+    color: #000000;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.skills-left, .skills-right {
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+}
+
+.skills-left h2, .skills-right h2 {
+    font-size: 27px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    color: #000000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    margin: 8px 0;
+    padding-left: 15px;
+    position: relative;
+}
+
+ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.divider {
+    width: 2px;
+    background: #333;
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Responsive Mode */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .skills-left, .skills-right {
+        width: 100%;
+        text-align: center;
+    }
 }
