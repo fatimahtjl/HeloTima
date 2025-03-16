@@ -49,9 +49,9 @@ body {
         flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 10px;
+        right: 0;
         background: #e6d6f2;
-        width: 200px;
+        width: auto;
         padding: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
