@@ -692,14 +692,17 @@ ul li::before {
     font-size: 42px;
     font-weight: bold;
     margin-bottom: 30px;
-    opacity: 0;
-    transform: translateY(-50px);
+    opacity: 1;  /* Teks tetap terlihat */
+    transform: translateY(0);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+.contact-title span { 
+color: #000000;
+}
 
-.contact-title.show h1 {
-    opacity: 1;
-    transform: translateY(0);
+.contact-title.fade-in {
+    opacity: 0;
+    transform: translateY(-30px);
 }
 
 .contact-container {
@@ -707,7 +710,7 @@ ul li::before {
     align-items: center;
     justify-content: center;
     gap: 40px;
-    background: #fff;
+    
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -716,11 +719,6 @@ ul li::before {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.contact-container.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .contact-img img {
@@ -756,7 +754,7 @@ ul li::before {
 }
 
 button {
-    background: #ff6600;
+    background: #000000;
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -766,7 +764,7 @@ button {
 }
 
 button:hover {
-    background: #cc5500;
+    background: #ffffff;
 }
 
 /* Animasi Scroll */

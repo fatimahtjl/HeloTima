@@ -150,9 +150,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Animasi scroll agar elemen muncul saat di-scroll ke bawah
 document.addEventListener("DOMContentLoaded", function () {
-    const fadeElements = document.querySelectorAll('.fade-in, .contact-title h1, .contact-container');
+    const fadeElements = document.querySelectorAll('.fade-in');
 
     function checkScroll() {
         fadeElements.forEach(el => {
@@ -160,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (rect.top < window.innerHeight * 0.9) {
                 el.classList.add('show');
             } else {
-                el.classList.remove('show'); // Animasi tetap ada saat kembali ke atas lalu ke bawah
+                el.classList.remove('show');  // Supaya animasi bisa muncul lagi saat di-scroll ulang
             }
         });
     }
