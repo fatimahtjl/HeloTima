@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman' ;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 }
 body {
     background: linear-gradient(to right, #a999cc, #f8f3ff);
@@ -359,7 +359,20 @@ body {
     line-height: 2.0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .about-title h1 {
+        line-height: 4.0;
+        margin-top: 180px;
+        font-size: 40px; /* Ukuran font lebih kecil untuk layar tablet */
+    }
+}
 
+@media (max-width: 480px) {
+    .about-title h1 {
+        font-size: 32px; /* Ukuran font lebih kecil untuk HP */
+    }
+}
 .about-title span {
     color: rgb(0, 0, 0);  
 }
@@ -433,6 +446,7 @@ body {
     }
 
     .about-img {
+        margin-top: -170px;
         transform: translateX(-80px);
         opacity: 1;
        
@@ -713,7 +727,7 @@ color: #000000;
     
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
     margin: auto;
     opacity: 0;
@@ -732,7 +746,10 @@ color: #000000;
 }
 
 .contact-form h2 {
-    font-size: 28px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     
+    color: #000000;
+    font-size: 30px;
     margin-bottom: 15px;
 }
 
@@ -741,6 +758,7 @@ color: #000000;
 }
 
 .input-group label {
+    color: #000000;
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
@@ -749,7 +767,7 @@ color: #000000;
 .input-group input, .input-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 5px;
 }
 
@@ -765,6 +783,7 @@ button {
 
 button:hover {
     background: #ffffff;
+    color: #000000;
 }
 
 /* Animasi Scroll */
