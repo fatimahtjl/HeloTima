@@ -133,3 +133,18 @@ document.addEventListener("DOMContentLoaded", function () {
     checkScroll(); // Jalankan saat pertama kali load
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const projectsTitle = document.querySelector('.projects-title');
+
+    function checkScroll() {
+        const rect = projectsTitle.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0) {
+            projectsTitle.classList.add('show');
+        } else {
+            projectsTitle.classList.remove('show'); // Reset animasi saat keluar layar
+        }
+    }
+
+    window.addEventListener("scroll", checkScroll);
+    checkScroll(); // Cek saat pertama kali halaman dimuat
+});
