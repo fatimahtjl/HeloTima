@@ -2,6 +2,7 @@
     
     margin: 0;
     padding: 0;
+    
     box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 }
@@ -43,6 +44,7 @@ body {
     .menu-toggle {
         display: block; /* Muncul di HP */
     }
+  
 
     .navbar {
         display: none; /* Sembunyikan menu */
@@ -76,6 +78,9 @@ body {
     .logo {
         
         text-align: center;
+    }
+    .body {
+        width: auto;
     }
 }
 .navbar a {
@@ -412,7 +417,7 @@ body {
 }
 .about-content h1{
     font-size: 45px;
-    margin-left: 120px;
+   text-align: center;
     font-weight: 700;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #ffffff    ;
