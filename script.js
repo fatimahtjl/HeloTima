@@ -148,3 +148,23 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", checkScroll);
     checkScroll(); // Cek saat pertama kali halaman dimuat
 });
+
+
+// Animasi scroll agar elemen muncul saat di-scroll ke bawah
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll('.fade-in, .contact-title h1, .contact-container');
+
+    function checkScroll() {
+        fadeElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.9) {
+                el.classList.add('show');
+            } else {
+                el.classList.remove('show'); // Animasi tetap ada saat kembali ke atas lalu ke bawah
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkScroll);
+    checkScroll(); // Cek saat pertama kali load
+});
