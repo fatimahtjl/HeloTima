@@ -458,12 +458,19 @@ body {
     padding: 40px 10%;
     
 }
-
 .skills-title h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 38px;
     font-weight: bold;
     margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.skills-title.show h1 {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .skills-title span {
@@ -472,19 +479,37 @@ body {
 
 .skills-container {
     display: flex;
-    justify-content: center;
     align-items: center;
     background: #fff;
+    margin-left: 40px;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     position: relative;
+    max-width: 1000px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.skills-container.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .skills-left, .skills-right {
     width: 50%;
     padding: 20px;
     text-align: left;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.skills-left.show, .skills-right.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .skills-left h2, .skills-right h2 {
@@ -514,6 +539,7 @@ ul li::before {
     font-weight: bold;
 }
 
+/* Garis Pembatas Tengah */
 .divider {
     width: 2px;
     background: #333;
@@ -521,6 +547,26 @@ ul li::before {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.divider.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animasi Scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Responsive Mode */
@@ -538,4 +584,5 @@ ul li::before {
         width: 100%;
         text-align: center;
     }
+    .skills container 
 }

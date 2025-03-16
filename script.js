@@ -96,3 +96,22 @@ sections.forEach(section => {
 });
 
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll('.fade-in, .skills-title h1, .skills-container, .skills-left, .skills-right, .divider');
+
+    function checkScroll() {
+        fadeElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0) {
+                el.classList.add('show'); // Tambah class saat elemen masuk viewport
+            } else {
+                el.classList.remove('show'); // Hapus class saat elemen keluar dari viewport
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkScroll);
+    checkScroll(); // Jalankan saat pertama kali load
+});
