@@ -342,13 +342,22 @@ body {
 .about-title {
     max-width: 2000px; 
     text-align: center;
-    height:300px;
+    height: 300px;
+    opacity: 0;
+    transform: translateY(-50px); /* Mulai dari atas */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
+.about-title.show {
+    opacity: 1;
+    transform: translateY(0); /* Kembali ke posisi normal */
+}
+
 .about-title h1 {
     font-size: 56px;
     font-weight: 700; 
     line-height: 2.0;
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .about-title span {
@@ -439,7 +448,7 @@ body {
     }
 
     .about-content h1 {
-        margin-left: 0;
+        margin-left: 150px;
     }
     .about-content {
         max-width: 90%; /* Biarkan teks mengikuti lebar layar dengan margin kecil */
@@ -480,11 +489,11 @@ body {
 .skills-container {
     display: flex;
     align-items: center;
-    background: #fff;
+   
     margin-left: 40px;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.1);
     position: relative;
     max-width: 1000px;
     width: 100%;
@@ -584,5 +593,81 @@ ul li::before {
         width: 100%;
         text-align: center;
     }
-    .skills container 
+    .skills-container {
+        margin-left: 10px;
+    }
 }
+
+
+.projects {
+
+    text-align: center;
+    padding: 50px 20px;
+    
+}
+
+.projects-title h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000000;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.projects-title span {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 300px;
+    max-width: 500px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.project-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    margin-top: 15px;
+    font-size: 22px;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+

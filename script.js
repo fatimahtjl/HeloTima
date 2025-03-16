@@ -17,6 +17,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const aboutTitle = document.querySelector('.about-title');
+
+    function checkScroll() {
+        const rect = aboutTitle.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0) {
+            aboutTitle.classList.add('show');
+        } else {
+            aboutTitle.classList.remove('show'); // Reset animasi saat keluar layar
+        }
+    }
+
+    window.addEventListener("scroll", checkScroll);
+    checkScroll(); // Cek saat pertama kali halaman dimuat
+});
+
+
 document.querySelectorAll('.navbar a').forEach(anchor => {
         anchor.addEventListener('click', function(event) {
             event.preventDefault(); // Mencegah reload halaman
@@ -115,3 +132,4 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", checkScroll);
     checkScroll(); // Jalankan saat pertama kali load
 });
+
