@@ -1,8 +1,6 @@
 * {
-    
     margin: 0;
     padding: 0;
-    
     box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 }
@@ -10,12 +8,7 @@ body {
     background: linear-gradient(to right, #a999cc, #f8f3ff);
     color: white;
 }
-@media (max-width: 768px) { 
-    .body {
-        max-width: 110%;
-        background-color: #000000;
-    }
-}
+
 .header {
     position: fixed; /* posisi tetap berada di tempat*/
     top: 0;
