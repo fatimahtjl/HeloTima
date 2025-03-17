@@ -10,7 +10,11 @@ body {
     background: linear-gradient(to right, #a999cc, #f8f3ff);
     color: white;
 }
-
+@media (max-width: 768px) { 
+    .body {
+        max-width: 90%;
+    }
+}
 .header {
     position: fixed; /* posisi tetap berada di tempat*/
     top: 0;
