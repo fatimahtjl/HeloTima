@@ -167,3 +167,29 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", checkScroll);
     checkScroll(); // Cek saat pertama kali load
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const projectCards = document.querySelectorAll(".project-card-big");
+
+    const observerOptions = {
+        root: null, // Menggunakan viewport sebagai root
+        rootMargin: "0px",
+        threshold: 0.2 // Elemen terlihat 20% baru akan ditrigger
+    };
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            } else {
+                entry.target.classList.remove("show");
+            }
+        });
+    }, observerOptions);
+
+    projectCards.forEach(card => {
+        observer.observe(card);
+    });
+});
