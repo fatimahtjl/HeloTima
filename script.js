@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-<script>
+ 
 document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault(); // Mencegah refresh halaman
     
@@ -208,4 +208,4 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 function closeModal() {
     document.getElementById("thank-you-modal").style.display = "none";
 }
-</script>
+ 
