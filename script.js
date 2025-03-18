@@ -193,3 +193,19 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(card);
     });
 });
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Mencegah refresh halaman
+    
+    // Tampilkan modal
+    document.getElementById("thank-you-modal").style.display = "flex";
+    
+    // Reset form setelah submit
+    this.reset();
+});
+
+function closeModal() {
+    document.getElementById("thank-you-modal").style.display = "none";
+}
+</script>
