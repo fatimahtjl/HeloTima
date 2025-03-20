@@ -83,6 +83,18 @@ body {
     display: flex;
     gap: 20px;
 }
+/* Tombol hamburger */
+.menu-toggle {
+    display: none; /* Sembunyikan default */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Navbar biasa (desktop) */
+.navbar {
+    display: flex;
+    gap: 20px;
+}
 
 /* Responsif: Navbar berubah jadi hamburger menu */
 @media (max-width: 768px) {
