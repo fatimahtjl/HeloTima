@@ -10,42 +10,6 @@ body {
     color: white;
    
 }
-* {
-    
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
-}
-body {
-    background: linear-gradient(to right, #a999cc, #f8f3ff);
-    color: white;
-   
-}
-
-
-
-
-
-
-.container { 
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.header {
-    position: fixed; /* posisi tetap berada di tempat*/
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 40px 10%;
-    background: linear-gradient(to right, #beb2da, #f8f3ff);
-    display: flex; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
 .container { 
     max-width: 100%;
     margin: 0 auto;
@@ -66,23 +30,6 @@ body {
 }
 
 
-
-
-
-
-
-/* Tombol hamburger */
-.menu-toggle {
-    display: none; /* Sembunyikan default */
-    font-size: 30px;
-    cursor: pointer;
-}
-
-/* Navbar biasa (desktop) */
-.navbar {
-    display: flex;
-    gap: 20px;
-}
 /* Tombol hamburger */
 .menu-toggle {
     display: none; /* Sembunyikan default */
